@@ -1,0 +1,71 @@
+button.cell {
+  width: min(15vw, 124px);
+  height: min(15vw, 124px);
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+button#submit,
+button#reset {
+  width: 15vw;
+  height: 3vw;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cell.highlighted {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+button.cell.matched {
+  display: none;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: min(70vw, 536px);
+  margin: auto;
+  padding: 5px;
+}
+
+.match {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: min(526px, calc(60vw + 30px));
+  height: min(15vw, 124px);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.match h3 {
+  margin: 0;
+}
+
+.match.color1 {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.match.color2 {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.match.color3 {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.match.color4 {
+  background-color: rgba(255, 255, 0, 0.2);
+}
