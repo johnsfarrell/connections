@@ -66,26 +66,32 @@ function App() {
   const win = matches.length === 4;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Connections!</h1>
-      </header>
-      <Board
-        connections={connections}
-        currentHighlighted={currentHighlighted}
-        matches={matches}
-        handleCellClick={handleCellClick}
-      />
-      <p>{win ? "You Won!" : message}</p>
-      {!win && (
-        <button id="submit" onClick={handleSubmit}>
-          <b>Submit</b>
+    <>
+      <div className="mobile">
+        <p>Please play on a desktop device!</p>
+        <p>ʕ•́ᴥ•̀ʔっ💻</p>
+      </div>
+      <div className="App desktop">
+        <header className="App-header">
+          <h1>Connections!</h1>
+        </header>
+        <Board
+          connections={connections}
+          currentHighlighted={currentHighlighted}
+          matches={matches}
+          handleCellClick={handleCellClick}
+        />
+        <p>{win ? "You Won!" : message}</p>
+        {!win && (
+          <button id="submit" onClick={handleSubmit}>
+            <b>Submit</b>
+          </button>
+        )}
+        <button id="reset" onClick={() => window.location.reload()}>
+          <b>{!win ? "Skip" : "New Game"}</b>
         </button>
-      )}
-      <button id="reset" onClick={() => window.location.reload()}>
-        <b>{!win ? "Skip" : "New Game"}</b>
-      </button>
-    </div>
+      </div>
+    </>
   );
 }
 
